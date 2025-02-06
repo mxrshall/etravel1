@@ -1,12 +1,15 @@
-import { motion } from "framer-motion"
+import Homepage from "./Homepage";
+import Galeria from "./Galeria";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-export default function App() {
+function App() {
   return (
-    <motion.h1
-      animate={{ x: 100 }} 
-      transition={{ duration: 0.5 }}
-      className="text-3xl font-bold underline text-red-400">
-      Hello world!
-    </motion.h1>
-  )
+    <Routes>
+        <Route path="/etravel1/" element={<Homepage />} />
+        <Route path="/galeria" element={<Galeria />} />
+    </Routes>
+  );
 }
+
+export default App;
